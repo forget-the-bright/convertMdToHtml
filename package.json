@@ -4,7 +4,7 @@
   "main": "compile-md-to-html.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node compile-md-to-html.js"
+    "run": "node index.js"
   },
   "author": "wanghao",
   "license": "ISC",
