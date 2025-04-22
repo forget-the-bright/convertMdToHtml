@@ -1,11 +1,11 @@
-function htmlTemplate(htmlContent) {
-    return `
+function htmlTemplate(htmlContent,htmlTitle) {
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Markdown to HTML</title>
+      <title>${htmlTitle}</title>
       <link rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-0e6d32d2.css">
       <link rel="stylesheet" href="https://github.githubassets.com/assets/site-3a3a0e1d.css">
       <style>
@@ -131,14 +131,14 @@ function htmlTemplate(htmlContent) {
           </div>
           <div class="markdown-body">
                ${htmlContent}
-           </div>
+          </div>
     </div>  
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script>
       hljs.highlightAll();
-
+      
       // 定义全局配置
       Fancybox.defaults = {
         ...Fancybox.defaults, // 保留默认配置

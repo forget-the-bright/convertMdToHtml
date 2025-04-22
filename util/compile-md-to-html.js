@@ -29,9 +29,8 @@ async function compileMarkdownFile(mdFilePath, htmlFilePath, htmlTemplate) {
 
         // 读取 Markdown 文件内容
         const mdContent = await fs.readFile(mdFilePath, 'utf-8');
-
         // 使用 markdown-it 将 Markdown 转换为 HTML
-        const htmlContent = htmlTemplate(md.render(mdContent));
+        const htmlContent = htmlTemplate(md.render(mdContent),path.basename(mdFilePath, '.md'));
         // 使用 js-beautify 格式化 HTML
         const formattedHtml = beautify(htmlContent, {
             indent_size: 2, // 缩进大小
